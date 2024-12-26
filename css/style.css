@@ -377,7 +377,7 @@ border-radius: 50% 20% / 10% 40%;
   width: auto;
   padding: 0 2rem;
   margin: 0 auto;
-  background-image: url("IMG/Portada.jpg");
+  background-image: url("./IMG/Portada.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
