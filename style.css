@@ -178,6 +178,31 @@ video {
 
 
 
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #1DA851;
+}
+
+.whatsapp-icon {
+  font-size: 30px;
+  color: white;
+  vertical-align: middle;
+}
+
+
 
 
 /* portada  */
