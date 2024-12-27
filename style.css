@@ -64,9 +64,9 @@ a:hover {
 
 /* Contenedores */
 .container {
-  width: 80%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Ejemplo de una clase de utilidad */
@@ -282,7 +282,17 @@ video {
     background-color: #28a745; border: none; cursor: pointer; transition: background-color 0.3s; } 
     .btn-banner:hover { background-color: #218838; } 
     
-    /* Media Queries */ @media (max-width: 1200px) { .banner h1 { font-size: 2.5rem; } .banner p { font-size: 1rem; } .btn-banner { font-size: 0.9rem; } } @media (max-width: 992px) { .banner h1 { font-size: 2rem; } .banner p { font-size: 0.9rem; } .btn-banner { font-size: 0.8rem; } } @media (max-width: 768px) { .banner h1 { font-size: 1.5rem; } .banner p { font-size: 0.8rem; } .btn-banner { font-size: 0.7rem; } } @media (max-width: 576px) { .banner h1 { font-size: 1.2rem; } .banner p { font-size: 0.7rem; } .btn-banner { font-size: 0.6rem; } }
+    /* Media Queries */ @media (max-width: 1200px) { .banner h1 { font-size: 2.5rem; } 
+    .banner p { font-size: 1rem; } 
+    .btn-banner { font-size: 0.9rem; } }
+     @media (max-width: 992px) { 
+      .banner h1 { font-size: 2rem; } 
+      .banner p { font-size: 0.9rem; } 
+      .btn-banner { font-size: 0.8rem; } } @media (max-width: 768px) { 
+        .banner h1 { font-size: 1.5rem; } .banner p { font-size: 0.8rem; } 
+        .btn-banner { font-size: 0.7rem; } } @media (max-width: 576px) { 
+          .banner h1 { font-size: 1.2rem; } .banner p { font-size: 0.7rem; } 
+          .btn-banner { font-size: 0.6rem; } }
 
 
 
@@ -294,9 +304,9 @@ video {
   justify-content: space-evenly;
   align-items: center;
   min-height: 25vh;
+  max-width: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  margin: 0 auto;
   background:url("IMG/fondo-portada.png") ; 
   background-attachment: fixed;
    background-position: center; 
@@ -445,17 +455,13 @@ border-radius: 50% 20% / 10% 40%;
   }
 }
 
-
-
-
 /* Servicios  */
 
 .servicios  {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
-  width: auto;
+  height: 130vh;
   padding: 0 2rem;
   margin: 0 auto;
   background-image: url("IMG/background-servicios.jpg");
@@ -472,7 +478,7 @@ border-radius: 50% 20% / 10% 40%;
    color: #fff; 
 }
 
-.container {
+.cuadricula {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -532,7 +538,7 @@ transition: all 0.5s ease-in;
   .servicios {
     height: auto;
   }
-  .container {
+  .cuadricula {
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
@@ -545,7 +551,7 @@ transition: all 0.5s ease-in;
     height: auto;
   }
 
-  .container {
+  .cuadricula {
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
@@ -557,7 +563,7 @@ transition: all 0.5s ease-in;
   .servicios {
     height: auto;
   }
-  .container {
+  .cuadricula {
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
@@ -571,7 +577,7 @@ transition: all 0.5s ease-in;
     width: 100%;
     margin: 0 auto;
   }
-  .container {
+  .cuadricula {
     display: grid;
     margin: 0 auto;
     padding: 1em;
@@ -591,14 +597,6 @@ align-items: center;
   }
 
 }
-
-
-
-
-
-
-
-
 
 
  .frase-servicios {
@@ -688,88 +686,6 @@ font-style: italic;
    }
  }
 
-   .row2 {
-   width: 100%;
-   display: grid;
-   grid-template-columns:repeat(2,1fr) ;
-   grid-gap:20px ;
-   overflow-x: hidden;
-   padding-left:10rem ;
-   padding-right:10rem ;
-   padding-top: 3rem;
-   padding-bottom: 3rem;
-   }
-
-
-   .row2 .imgWrapper {
-     overflow: hidden; 
-     border-radius:30% 20% / 10% 40% ;
-     box-shadow: 5px 5px 10px;
-     color:rgb(29, 89, 77);
-   }
-
-    .imgWrapper img {
-    
-       width: 100%;
-       height: 100%;
-       border-radius: 30% 20% / 10% 40%;
-    }
-
-
-     .contentWrapper  {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 30px;
-    }
-
-
-    .textWrapper  {
-      display: inline-block;
-      background: rgb(29, 89, 77);
-      margin-left: 30px;
-      width:300px ;
-      height: 3px;  
-    }
-
-   
-
-   .content h2 {
-    margin-top: 50px;
-    margin-left: 30px;
-     font-size: 40px;
-     font-weight: 700;
-     color: black;
-    }
-
-   .content p {
-   text-align:left;
-    margin-left: 30px;
-    align-items:center;
-     font-size: 20px;
-     line-height: 30px;
-      margin-top: 10px;
-      color: #000;
-      display: flex;
-      justify-content: right; 
-     }
- 
-
-     .proceso {
-     height: 100vh;
-     width: 100%;
-     margin: 0 auto;
-     padding: 2rem;
-     }
-     
-.proceso img {
-  position: absolute;
-height: 100%;
-width: auto;
-padding: 2rem;
-}
-     
  
  .formulario {
 height: 80vh;
