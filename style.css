@@ -122,7 +122,7 @@ a:hover {
   height: 100vh;
   overflow: hidden;
 }
- 
+
 video {
   position: absolute;
   top: 50%;
@@ -137,38 +137,236 @@ video {
 
 .overlay {
   position: absolute;
-   top: 0; 
-   left: 0; 
-   right: 0; 
-   bottom: 0; 
-   display: flex; 
-   flex-direction:column; 
-    justify-content: center;
-     align-items: center; 
-     text-align: center; 
-     color: white; 
-     animation: slideUp 2s ease-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  animation: slideUp 2s ease-out;
 }
 
 .overlay h3 {
-  font-size: 3.5rem; 
+  font-size: 3.5rem;
   margin-bottom: 10px;
-   background: rgb(2, 2, 121,0.5); 
-  animation-delay: 1s; 
+  background: rgba(2, 2, 121, 0.5);
+  animation-delay: 1s;
 }
 
 .overlay p {
-  font-size: 2rem; 
-  margin-bottom: 20px; 
-  background: rgb(2, 2, 121,0.5); 
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: rgba(2, 2, 121, 0.5);
   animation-delay: 1.5s;
 }
 
 .overlay .btn {
-  font-size: 1rem; 
-  padding: 10px 20px; 
-  animation-delay: 2s; 
+  font-size: 1rem;
+  padding: 10px 20px;
+  animation-delay: 2s;
 }
+
+
+
+/*navbar */
+.navbar {
+  background-color: transparent; 
+  transition: background-color 0.5s;
+}
+
+.navbar.scrolled { 
+  background-color: var(--color-primario); 
+}
+
+.navbar-brand {
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+
+.navbar-brand:hover {
+  color: #000;
+  transition: all 0.3 ease-in;
+}
+
+.navbar-nav a {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.nav-link {
+  font-size: 15px;
+  position: relative;
+  transition: all 0.3s ease-in;
+  color: #000;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .navbar-nav a {
+      font-size: 18px;
+      margin: 0.5em 0;
+  }
+  
+  .navbar-brand {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+  }
+  
+  .navbar-toggler {
+      margin-left: auto;
+  }
+  
+  .navbar-collapse {
+      background-color: var(--color-primario);
+      border-top: 1px solid #e5e5e5;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav a {
+      font-size: 18px;
+      margin: 0 1em;
+  }
+  
+  .navbar-brand {
+      margin: 0 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav a {
+      font-size: 20px;
+      margin: 0 1.5em;
+  }
+  
+  .navbar-brand {
+      margin: 0 4em;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  animation: slideUp 2s ease-out;
+}
+
+.overlay h3 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  background: rgba(2, 2, 121, 0.5);
+  animation-delay: 1s;
+}
+
+.overlay p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: rgba(2, 2, 121, 0.5);
+  animation-delay: 1.5s;
+}
+
+.overlay .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  animation-delay: 2s;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .overlay h3 {
+      font-size: 2rem; /* Ajustar tamaño de fuente para pantallas pequeñas */
+  }
+
+  .overlay p {
+      font-size: 1.2rem; /* Ajustar tamaño de fuente para pantallas pequeñas */
+  }
+
+  .overlay .btn {
+      font-size: 0.8rem; /* Ajustar tamaño de botón para pantallas pequeñas */
+      padding: 8px 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .overlay h3 {
+      font-size: 3rem; /* Ajustar tamaño de fuente para pantallas medianas */
+  }
+
+  .overlay p {
+      font-size: 1.5rem; /* Ajustar tamaño de fuente para pantallas medianas */
+  }
+
+  .overlay .btn {
+      font-size: 0.9rem; /* Ajustar tamaño de botón para pantallas medianas */
+      padding: 9px 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .overlay h3 {
+      font-size: 3.5rem; /* Tamaño de fuente para pantallas grandes */
+  }
+
+  .overlay p {
+      font-size: 2rem; /* Tamaño de fuente para pantallas grandes */
+  }
+
+  .overlay .btn {
+      font-size: 1rem; /* Tamaño de botón para pantallas grandes */
+      padding: 10px 20px;
+  }
+}
+
+
+
+
+
+
+
+/* Esconde ambos videos por defecto */
+
+
+.video-large, .video-small {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .video-large {
+      display: block; /* Muestra el video grande en pantallas grandes */
+  }
+}
+
+@media (max-width: 767px) {
+  .video-small {
+      display: block; /* Muestra el video pequeño en pantallas pequeñas */
+  }
+}
+
+
+
 
 
 
