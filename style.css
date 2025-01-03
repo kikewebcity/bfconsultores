@@ -78,8 +78,13 @@ a:hover {
 
 /*navbar */
 .navbar {
-background:  var(--color-primario); 
+  background-color: transparent; 
+  transition: background-color 0.5s;
 }
+
+.navbar.scrolled { 
+  background-color: var(--color-primario); 
+ }
 
 .navbar-brand {
   width: 50%;

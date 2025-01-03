@@ -22,6 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//funcion hacer scrolling navbar 
+
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) { // Ajusta este valor según tus necesidades
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+
+
 
 
 
