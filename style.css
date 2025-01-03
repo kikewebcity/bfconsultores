@@ -2,10 +2,11 @@
 :root {
   --color-primario: #10015d;
   --color-secundario: #351ebf;
-  --color-terciario: #b6bef6;
-  --color-fondo: #7697A0;
+  --color-terciario: #848484;
+  --color-naranja : #e26b1b;
+  --color-azul: #0f034a;
+  --color-fondo: #47717d;
   --color-texto: #000000;
-  --color-azul-transparente: #361ebfc2;
 }
 
 /* Estilos básicos */
@@ -482,7 +483,7 @@ border-radius: 50% 20% / 10% 40%;
 
 
 .box1 {
-background-color:var(--color-primario) ;
+background-color:var(--color-azul) ;
 
 }
 .box2 {
@@ -495,13 +496,11 @@ background-color:var(--color-primario) ;
   background-color:var(--color-fondo) ; 
 }
 .box5 {
-  background-color: var();  
+  background-color: var(--color-naranja);  
 }
 .box6 {
-  background-color:var() ;  
+  background-color:var(--color-azul) ;  
 }
-
-
 
 
 
@@ -883,7 +882,7 @@ form .button-area{
 
 footer{
  
-  background: black;
+  background:var(--color-azul);
   width: 100%;
   bottom: 0;
   left: 0;
