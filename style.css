@@ -8,7 +8,7 @@
   --color-fondo: #47717d;
   --color-texto: #000000;
   --color-blanco:#fff;
-
+  --color-mostaza : #c69023;
 }
 
 /* Estilos básicos */
@@ -552,16 +552,16 @@ background-color:var(--color-azul) ;
 
 }
 .box2 {
-  background-color: var(--color-secundario);  
+  background-color: var(--color-mostaza);  
 }
 .box3 {
-  background-color: var(--color-terciario); 
+  background-color: var(--color-naranja); 
 }
 .box4 {
-  background-color:var(--color-fondo) ; 
+  background-color:var(--color-terciario) ; 
 }
 .box5 {
-  background-color: var(--color-naranja);  
+  background-color: var(--color-fondo);  
 }
 .box6 {
   background-color:var(--color-azul) ;  
