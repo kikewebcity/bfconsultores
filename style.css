@@ -954,8 +954,110 @@ form .button-area{
     font-size: 14px;
   }
 }
+/* conocenos  */
 
 
+.seccion {
+  height: 100vh;
+  background-image: url("./IMG/Portada.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.seccion .contenido2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+.seccion .contenido2 h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+.seccion .contenido2 p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+.seccion .contenido2 button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.seccion .contenido2 button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+
+
+@media (max-width: 768px) {
+  
+  .seccion .contenido2 {
+    text-align: center;
+  }
+  .seccion .contenido2 :is(h2, p) {
+    max-width: 100%;
+  }
+  .seccion .contenido2 h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .seccion .contenido2 button {
+    padding: 9px 18px;
+  }
+}
+
+
+/* vision  */
+
+
+.objetivos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.text, .image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .objetivos {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+  
+  .image {
+      text-align: center;
+  }
+}
+
+.objetivos.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 

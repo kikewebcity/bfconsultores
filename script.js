@@ -33,9 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+//funcion hacer scrolling imagenes mision 
 
-
-
+    document.addEventListener('DOMContentLoaded', () => {
+      const objetivos = document.querySelectorAll('.objetivos');
+  
+      const observar = new IntersectionObserver((entradas, observador) => {
+          entradas.forEach(entrada => {
+              if (entrada.isIntersecting) {
+                  entrada.target.classList.add('visible');
+              } else {
+                  entrada.target.classList.remove('visible');
+              }
+          });
+      });
+  
+      objetivos.forEach(objetivo => {
+          observar.observe(objetivo);
+      });
+  });
+  
 
 
 
