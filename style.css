@@ -12,25 +12,27 @@
 }
 
 /* Estilos básicos */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+
 body {
+  width: auto;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-texto);
   line-height: 1.6;
-  margin: 0;
+ 
 }
 
 h1, h2, h3 {
   margin-bottom: 0.5em;
-}
-
-p {
-  margin-bottom: 1em;
 }
 
 /* Enlaces */
@@ -54,7 +56,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: var();
+  background-color: var(--color-mostaza);
 }
 
 .textWrapper2 {
@@ -63,6 +65,10 @@ a:hover {
   margin-left: 13rem;
   width:50% ;
   height: 3px;  
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* Contenedores */
@@ -169,6 +175,75 @@ video {
   padding: 10px 20px;
   animation-delay: 2s;
 }
+
+/* Diseño para pantallas grandes */
+@media (min-width: 1024px) {
+  .video-large {
+    display: block;
+  }
+  .video-small {
+    display: none;
+  }
+
+  .overlay h3 {
+    font-size: 4rem;
+  }
+
+  .overlay p {
+    font-size: 2.5rem;
+  }
+
+  .overlay .btn {
+    font-size: 1.2rem;
+  }
+}
+
+/* Diseño para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .video-large {
+    display: none;
+  }
+  .video-small {
+    display: block;
+  }
+
+  .overlay h3 {
+    font-size: 3rem;
+  }
+
+  .overlay p {
+    font-size: 2rem;
+  }
+
+  .overlay .btn {
+    font-size: 1rem;
+  }
+}
+
+/* Diseño para pantallas pequeñas */
+@media (max-width: 767px) {
+  .video-large {
+    display: none;
+  }
+  .video-small {
+    display: block;
+  }
+
+  .overlay h3 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1.5rem;
+  }
+
+  .overlay .btn {
+    font-size: 0.9rem;
+  }
+}
+ 
+
+
 
 
 
@@ -365,12 +440,6 @@ video {
   }
 }
 
-
-
-
-
-
-
 /*animation*/
 
    .overlay h3, .overlay p, .overlay .btn { 
@@ -382,11 +451,7 @@ video {
 { transform: translateY(0); } } 
 @keyframes fadeIn { to { opacity: 1; } }
 
-
-
-
-
-
+/*whatsaap*/
 
 .whatsapp-button {
   position: fixed;
@@ -461,8 +526,8 @@ video {
 .hero-section .hero {
   justify-content: flex-end;
   text-align: justify;
-  margin-left: 8em;
-  margin-right: 8em;
+  margin-left: 4em;
+  margin-right: 4em;
   color: #000;
 }
 
@@ -498,7 +563,8 @@ video {
 @media (max-width: 767px) {
   .portada-imagen.mobile {
       display: block; /* Muestra la imagen para móviles en pantallas pequeñas */
-  }
+     padding-right: 5em;
+    }
   .mobile img {
     width: 50%;
   }
@@ -511,10 +577,10 @@ video {
     }
 
   .hero p {
-    font-size: 1em;
-    margin:2em ; /* Ajusta el margen para pantallas pequeñas */
-   padding: 5em ;
-   
+    margin:  0;
+text-align: center;
+    font-size: 1.1em; ; /* Ajusta el margen para pantallas pequeñas */
+   width: 100%;
     }
 }
 
@@ -526,7 +592,6 @@ video {
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
-  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -585,8 +650,7 @@ background-color:var(--color-azul) ;
 
 
 .icon-box img {
-  width: 50px;
-  height: 50px;
+  height: 10vh;
   margin-bottom: 10px;
 }
 
@@ -669,31 +733,22 @@ transition: all 0.5s ease-in;
   }
 
   .icon-box h3 {
-    margin: 0 auto;
-    padding: 1em;
+    margin: 0 ;
+    font-size: 1.4em;
+    padding: 0.5em;
     text-align: center;
 align-items: center;
   }
   .icon-box p {
-    
+    padding: 1em;
+    font-size: 1.1em;
   }
 
 }
 
-
- .frase-servicios {
-  height: 10vh;
-  width: auto;
-  text-align: center;
- }
-
- .frase-servicios h2 {
-font-size: 20px;
-font-weight: 400;
-font-style: italic;
-}
-
  
+/* Contacto  */
+
  .formulario {
 height: 80vh;
   width: auto;
@@ -1058,6 +1113,51 @@ form .button-area{
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* servicios  */
+.portada-servicios {
+  height: 100vh;
+  background-image: url("IMG/portada\ de\ servicios.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.servicios-p h3  {
+ font-size: 28px;
+ font-weight: 500;
+ margin: 10vh;
+  text-align: center;
+
+}
+.servicios-p p  {
+  margin: 15vh;
+  text-align: center;
+  font-size: 18px;
+ 
+ }
+
+
+.servicios-p {
+  text-align: center;
+margin: 10px;
+align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* Espacio entre las imágenes */
+}
+
+.grid-container img {
+  width: 40%;
+  height: auto;
+}
+
 
 
 
