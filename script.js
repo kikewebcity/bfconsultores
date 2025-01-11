@@ -47,6 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-
+//contador de servicios 
+$(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 1200
+    });
+  });
 
 
