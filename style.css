@@ -97,12 +97,14 @@ img {
 
 /*navbar */
 .navbar {
-  background-color: transparent; 
   transition: background-color 0.5s;
+ 
 }
 
 .navbar.scrolled { 
   background-color: var(--color-primario); 
+ 
+  
  }
 
 .navbar-brand {
@@ -110,11 +112,13 @@ img {
   margin: 0 auto;
   font-weight: bold;
   transition: all 0.3 ease-in;
+  color:var(--color-primario);
 }
 
-.navbar-brand:hover {
+.navbar:hover {
  color: #000;
  transition: all 0.3 ease-in;
+ color: var(--color-mostaza);
 }
 
 .navbar-nav a {
@@ -122,8 +126,15 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 3px;
-
+  color: var(--color-blanco);
+  
 }
+
+.navbar a:hover {
+  color: var(--color-mostaza);
+  transition: all 0.3 ease-in;
+ }
+
 
 .nav-link {
   font-size: 15px;
@@ -132,6 +143,57 @@ img {
   color: #000;
 }
 
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .navbar-nav a {
+      font-size: 18px;
+      margin: 0.5em 0;
+  }
+  
+  .navbar-brand {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+  }
+  
+  .navbar-toggler {
+      margin-left: auto;
+  }
+  
+  .navbar-collapse {
+      background-color: var(--color-primario);
+      border-top: 1px solid #e5e5e5;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav a {
+      font-size: 18px;
+      margin: 0 1em;
+  }
+  
+  .navbar-brand {
+      margin: 0 2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav a {
+      font-size: 20px;
+      margin: 0 1.5em;
+  }
+  
+  .navbar-brand {
+      margin: 0 4em;
+  }
+}
 
 .video-container {
   position: relative;
@@ -261,9 +323,6 @@ margin: 5px;
 border: none;
 }
 
-.card-img-top {
-  
-}
 
 .tarjeta-cuerpo {
   background: var(--color-secundario);
@@ -311,92 +370,6 @@ border: none;
 
 
 
-/*navbar */
-.navbar {
-  background-color: transparent; 
-  transition: background-color 0.5s;
-}
-
-.navbar.scrolled { 
-  background-color: var(--color-primario); 
-}
-
-.navbar-brand {
-  width: 50%;
-  margin: 0 auto;
-  font-weight: bold;
-  transition: all 0.3s ease-in;
-}
-
-.navbar-brand:hover {
-  color: #000;
-  transition: all 0.3 ease-in;
-}
-
-.navbar-nav a {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.nav-link {
-  font-size: 15px;
-  position: relative;
-  transition: all 0.3s ease-in;
-  color: #000;
-}
-
-/* Media Queries */
-@media (max-width: 767px) {
-  .navbar-nav {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-  }
-  
-  .navbar-nav a {
-      font-size: 18px;
-      margin: 0.5em 0;
-  }
-  
-  .navbar-brand {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-  }
-  
-  .navbar-toggler {
-      margin-left: auto;
-  }
-  
-  .navbar-collapse {
-      background-color: var(--color-primario);
-      border-top: 1px solid #e5e5e5;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-nav a {
-      font-size: 18px;
-      margin: 0 1em;
-  }
-  
-  .navbar-brand {
-      margin: 0 2em;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-nav a {
-      font-size: 20px;
-      margin: 0 1.5em;
-  }
-  
-  .navbar-brand {
-      margin: 0 4em;
-  }
-}
 
 
 /*whatsaap*/
@@ -1174,20 +1147,22 @@ form .button-area{
 
 .logo-servicios {
   background-color: #fff;
-  margin-left: 25%;
+  margin-left: 15%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 100vh;
+  max-width: 150vh;
   width: 100%;
   box-sizing: border-box;
 }
 
 .logo-servicios h3 {
+  margin: 10px;
   font-size: 3em;
 }
 .logo-servicios p {
   font-size: 1.3em;
+  margin: 10px;
 }
 
 .grid-container {
@@ -1199,7 +1174,6 @@ form .button-area{
 
 .grid-container img {
   width: 100%;
-  margin: 30px;
   height: auto;
   border-radius: 8px;
 }
@@ -1460,7 +1434,7 @@ text-align: center;
 }
 
 .listado li {
-  font-size: 1em;
+  font-size: 1.5em;
   color: var(--color-blanco);
   font-weight: 500;
 }
