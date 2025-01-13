@@ -1120,7 +1120,7 @@ form .button-area{
 .portada-conocenos {
   height: 100vh;
   width: 100%;
-  background-image: url("IMG/portada\ conocenos.jpg");
+  background-image: url("IMG/portada-conocenos.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
