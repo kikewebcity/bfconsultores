@@ -864,14 +864,16 @@ form .button-area{
 
 .informacion span {
   font-size: 40px;
-  color: var(--color-secundario); /* Color azul para los iconos */
+  color: var(--color-mostaza); /* Color azul para los iconos */
   margin-bottom: 10px;
   display: block;
 }
 
 .informacion h1 {
-  color: var(--color-secundario);
-  font-size: 18px;
+  text-transform:uppercase;
+  color: var(--color-mostaza);
+  font-size: 1.2em;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
