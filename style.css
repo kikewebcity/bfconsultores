@@ -1308,19 +1308,22 @@ footer{
 .derecha form .btn button:hover{
   background: #000;
 }
-.leyenda center{
+.leyenda .center{
   padding: 5px;
   font-size: 0.9375rem;
   background: #151515;
+  text-align: center;
 }
-.leyenda center span{
+.leyenda .center span{
   color: #656565;
+ 
 }
-.leyenda center a{
+.leyenda .center a{
   color: var(--color-mostaza);
   text-decoration: none;
+
 }
-.leyenda center a:hover{
+.leyenda .center a:hover{
   text-decoration: underline;
 }
 @media screen and (max-width: 900px) {
