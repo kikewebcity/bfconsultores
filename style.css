@@ -18,10 +18,6 @@
   --fs-800 :2.325rem ;
   --fs-900 :3rem ;
 }
-
- 
-
-
 /* Estilos básicos */
 *,
 *::before,
@@ -31,17 +27,13 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   width: auto;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   color: var(--color-texto);
   line-height: 1.6;
- 
 }
-
 h1, h2, h3 {
   margin-bottom: 0.5em;
 }
@@ -51,7 +43,6 @@ a {
   color: var(--color-primario);
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -315,32 +306,7 @@ video {
   }
 }
 
-
-.card {
-  height: 100vh;
-  width: 100%;
-margin: 5px;
-border: none;
-}
-
-
-.tarjeta-cuerpo {
-  background: var(--color-secundario);
-}
-
-.tarjeta-cuerpo p {
-  color: var(--color-blanco);
-  font-size: 1em;
-  font-weight: 400;
-}
-.card-text {
- font-size: 1.2em;
- font-weight:500 ; 
-}
-
 /* Esconde ambos videos por defecto */
-
-
 .video-large, .video-small {
   display: none;
 }
@@ -350,15 +316,12 @@ border: none;
       display: block; /* Muestra el video grande en pantallas grandes */
   }
 }
-
 @media (max-width: 767px) {
   .video-small {
       display: block; /* Muestra el video pequeño en pantallas pequeñas */
   }
 }
-
 /*animation*/
-
    .overlay h3, .overlay p, .overlay .btn { 
       opacity: 0; 
       animation: fadeIn 2s forwards; } 
@@ -367,10 +330,6 @@ border: none;
 @keyframes slideUp { from { transform: translateY(100%); } to 
 { transform: translateY(0); } } 
 @keyframes fadeIn { to { opacity: 1; } }
-
-
-
-
 
 /*whatsaap*/
 
@@ -387,25 +346,18 @@ border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .whatsapp-button:hover {
   background-color: #1DA851;
 }
-
 .whatsapp-icon {
   font-size: 30px;
   color: white;
   vertical-align: middle;
 }
 
-
-
-
-
 .banner { display: flex; justify-content: center; 
   align-items: center; height: 70vh; background: url('./IMG/banner_.png') no-repeat center center/cover; 
   color: white; text-align: center; padding: 20px; } .banner-content { max-width: 600px; } 
-  
   
   
   .btn-banner { padding: 10px 20px; font-size: 1rem; color: white; 
@@ -505,8 +457,57 @@ text-align: center;
     }
 }
 
-
 /* Servicios  */
+.card-deck {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.tarjeta-texto {
+  min-height: 3vh;
+  text-align: justify;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
 
 .servicios  {
   display: flex;
@@ -517,7 +518,6 @@ text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .servicios-texto {
   margin: 0  10% 0 20%;
   padding: 10px;
@@ -525,13 +525,11 @@ text-align: center;
   font-size: 22px;
    color: #fff; 
 }
-
 .cuadricula {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr ;
 }
-
 
 .box1 {
 background-color:var(--color-azul) ;
@@ -817,11 +815,7 @@ form .button-area{
     text-align: center;
   }
 }
- 
 @media screen and (max-width: 580px) {
-
-
-
   .formulario {
     margin: 0;
     padding: 0;
@@ -835,15 +829,11 @@ form .button-area{
     
    }
 }
-
-
 /* info de atención  */
-
-
 .informacion {
   display: flex;
- margin-top: 10%  ;
- margin-bottom: 10%  ;
+ margin-top: 2%  ;
+ margin-bottom: 2% ;
  margin-left: 5%  ;
  padding: 3%;
   justify-content: space-around;
@@ -853,7 +843,6 @@ form .button-area{
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .informacion .certificado, .informacion .barra, .informacion .analisis, .informacion .grupo, .informacion .maleta {
   text-align: center;
   width: 18%;
@@ -885,7 +874,6 @@ form .button-area{
   font-size: 15px;
   font-weight: 500;
 }
-
 
 /* Media queries */
 
@@ -926,8 +914,6 @@ form .button-area{
   }
 }
 /* conocenos  */
-
-
 .seccion {
   height: 100vh;
   background-image: url("./IMG/Portada.jpg");
@@ -1046,10 +1032,7 @@ form .button-area{
   align-items: center;
   color: var();
 }
-
-
 /* contador  */
-
 .counter-up{
   background: url("images/bg-2.jpeg") no-repeat;
   min-height: 50vh;
@@ -1125,26 +1108,18 @@ form .button-area{
     padding: 30px 20px 0 20px;
   }
 }
-
 /* portada conocenos  */
-
-
 .portada-conocenos {
   height: 100vh;
+  width: 100%;
   background-image: url("IMG/portada\ conocenos.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 auto;
 }
-
-
-
 /* logo servicios */
-
-
-
 .logo-servicios {
   background-color: #fff;
   margin-left: 15%;
@@ -1155,7 +1130,6 @@ form .button-area{
   width: 100%;
   box-sizing: border-box;
 }
-
 .logo-servicios h3 {
   margin: 10px;
   font-size: 3em;
@@ -1164,7 +1138,6 @@ form .button-area{
   font-size: 1.3em;
   margin: 10px;
 }
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -1187,19 +1160,12 @@ form .button-area{
     grid-template-columns: 1fr;
   }
 }
-
-
-
-
-
 /* footer  */
-
 footer{
   position: relative;
   bottom: 0px;
   width: 100%;
   background: var(--color-azul);
-  
 }
 .main-content{
   display: flex;
@@ -1348,8 +1314,6 @@ footer{
     margin: 5px 0;
   }
 }
-
-
 
 
 
