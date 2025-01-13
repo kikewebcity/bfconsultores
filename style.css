@@ -47,7 +47,17 @@ a:hover {
   text-decoration: underline;
 }
 
+ .{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: var(--color-blanco); 
+}
+
+
 /* Botones */
+
+
 
 /* Estilos para el botón */
 .boton {
