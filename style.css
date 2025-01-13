@@ -95,7 +95,6 @@ img {
 .navbar.scrolled { 
   background-color: var(--color-primario); 
  
-  
  }
 
 .navbar-brand {
@@ -319,8 +318,8 @@ video {
 @media (max-width: 767px) {
   .video-small {
       display: block; /* Muestra el video pequeño en pantallas pequeñas */
-      max-width: 480px
-  }
+  height: 40vh;
+    }
 }
 /*animation*/
    .overlay h3, .overlay p, .overlay .btn { 
