@@ -127,7 +127,7 @@ img {
   width: 50%;
   margin: 0 auto;
   font-weight: bold;
-  transition: all 0.3 ease-in;
+  transition: all 0.3s ease-in;
   color:var(--color-primario);
 }
 
@@ -583,8 +583,6 @@ background-color:var(--color-azul) ;
   background-color:var(--color-azul) ;  
 }
 
-
-
 .icon-box {
   display: flex;
   width: 100%;
@@ -593,7 +591,7 @@ background-color:var(--color-azul) ;
   align-items: center;
   border: 1px solid #ccc;
   padding: 2.8em;
-  border-radius: px;
+  border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease-in;
 }
@@ -617,7 +615,7 @@ background-color:var(--color-azul) ;
 
 .icon-box h3 {
   margin: 0 auto;
-  padding: 1 em;
+  padding: 1em;
   text-align: center;
   align-items: center;
   color: #fff;
@@ -850,9 +848,8 @@ form .button-area{
 @media screen and (max-width: 580px) {
   .formulario {
     margin: 0;
-    padding: 0;
     height: 80vh;
-      width: 50;
+      width: 50%;
     }
 }
 @media screen and (max-width: 500px) {
