@@ -102,9 +102,7 @@ img {
 /* Contenedores */
 .container {
   width: 100%;
-  margin: 0;
-  padding: 10px;
-  
+  height: auto;
 }
 
 /* Ejemplo de una clase de utilidad */
@@ -409,12 +407,11 @@ video {
 
 .hero-section {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  min-height: 60vh;
+  min-height: 85vh;
   width: 100%;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   background: url("IMG/fondo-portada.png");
   background-attachment: fixed;
   background-position: center;
@@ -423,21 +420,21 @@ video {
 }
 
 .hero-section .hero {
-  justify-content: flex-end;
-  text-align: justify;
-  margin-left: 4em;
-  margin-right: 4em;
-  color: #000;
+max-width: 1000px;
+ text-align: center;
+ margin: 0 auto;
+ color: var(--color-texto); 
 }
 
 .hero h2 {
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 1em;
 }
 
 .hero p {
   font-size: 1.5em;
-  margin-left: 10em;
+  margin: 0 auto;
   color: #000;
   font-weight: 500;
 }
@@ -448,40 +445,47 @@ video {
 
 .portada-imagen img {
   margin-bottom: 1em;
-  margin-left: 4em;
-  width: 110%;
+  margin-left: 80px;
+  width: 70%;
+  max-width: 800px;
   border-radius: 50% 20% / 10% 40%;
 }
 
+
 @media (min-width: 768px) {
   .portada-imagen.desktop {
-      display: block; /* Muestra la imagen de escritorio en pantallas grandes */
+    display: block;
   }
 }
 
 @media (max-width: 767px) {
   .portada-imagen.mobile {
-      display: block; /* Muestra la imagen para móviles en pantallas pequeñas */
-     padding-right: 5em;
-    }
+    display: block;
+    padding-right: 5em;
+  }
+
   .mobile img {
-    width: 50%;
+    width: 100%;
+    max-width: 400px;
   }
 
   .hero-section {
-      flex-direction: column; /* Ajusta la flexbox para pantallas pequeñas */
-      align-items: center;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    }
+    padding: 2em;
+  }
 
   .hero p {
-    margin:  0;
-text-align: center;
-    font-size: 1.1em; ; /* Ajusta el margen para pantallas pequeñas */
-   width: 100%;
-    }
+    margin: 0;
+    text-align: center;
+    font-size: 1.1em;
+    width: 100%;
+  }
 }
+
+
 
 /* Servicios  */
 .card-deck {
