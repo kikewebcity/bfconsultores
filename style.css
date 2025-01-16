@@ -469,6 +469,7 @@ max-width: 1000px;
   .mobile img {
     width: 100%;
     max-width: 400px;
+    padding: 0;
   }
 
   .hero-section {
@@ -481,8 +482,9 @@ max-width: 1000px;
 
   .hero p {
     margin: 0;
+    padding: 0;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.3em;
     width: 100%;
   }
 }
