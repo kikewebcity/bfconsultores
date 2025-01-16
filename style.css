@@ -433,8 +433,10 @@ max-width: 1000px;
 }
 
 .hero p {
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin: 0 auto;
+  padding-right: 80px;
+  padding-bottom: 80px;
   color: #000;
   font-weight: 500;
 }
@@ -444,9 +446,9 @@ max-width: 1000px;
 }
 
 .portada-imagen img {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   margin-left: 80px;
-  width: 70%;
+  width: 60%;
   max-width: 800px;
   border-radius: 50% 20% / 10% 40%;
 }
