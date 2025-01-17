@@ -9,14 +9,8 @@
   --color-texto: #000000;
   --color-blanco:#fff;
   --color-mostaza : #c69023;
-  
-  --fs-300:1rem ;
-  --fs-400:1.1125rem ;
-  --fs-500 : 1.325rem;
-  --fs-600 :1.625rem ;
-  --fs-700 :2rem ;
-  --fs-800 :2.325rem ;
-  --fs-900 :3rem ;
+  --color-gris:#acacac ;
+
 }
 /* Estilos básicos */
 *,
@@ -490,8 +484,6 @@ max-width: 1000px;
 }
 
 
-
-/* Servicios  */
 .card-deck {
   display: flex;
   width: 100%;
@@ -549,156 +541,119 @@ max-width: 1000px;
   }
 }
 
-.servicios  {
+
+.servicios {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 20px;
 }
-.servicios-texto {
-  margin: 0  10% 0 20%;
-  padding: 10px;
-  text-align: justify;
-  font-size: 22px;
-   color: #fff; 
-}
+
 .cuadricula {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr ;
-}
-
-.box1 {
-background-color:var(--color-azul) ;
-
-}
-.box2 {
-  background-color: var(--color-mostaza);  
-}
-.box3 {
-  background-color: var(--color-naranja); 
-}
-.box4 {
-  background-color:var(--color-terciario) ; 
-}
-.box5 {
-  background-color: var(--color-fondo);  
-}
-.box6 {
-  background-color:var(--color-azul) ;  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
 .icon-box {
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--color-gris);
+  background-color: #fff;
   border: 1px solid #ccc;
-  padding: 2.8em;
-  border-radius: 2px;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 
-
-
 .icon-box img {
-  height: 10vh;
+  height: 100px;
   margin-bottom: 10px;
 }
 
-.icon-box p {
-  margin: 0 auto;
-  padding: 1em;
-  text-align: center;
-  align-items: center;
-  margin: 0;
-  font-size: 1.3vw;
-  color: #fff;
-}
-
 .icon-box h3 {
-  margin: 0 auto;
-  padding: 1em;
-  text-align: center;
-  align-items: center;
-  color: #fff;
-  font-size: 20px;
+  margin: 10px 0;
+  font-size: 1.5em;
 }
 
+.icon-box p {
+  font-size: 1em;
+  text-align: center;
+}
+
+.icon-box .boton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--color-secundario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.icon-box .boton:hover {
+  background-color: #0056b3;
+  transition: all 0.3s ease-in-out;
+}
 
 .icon-box:hover {
-background: #000;  
-transition: all 0.5s ease-in;
-}
-
-
-@media (max-width: 1200px) {
-  .servicios {
-    height: auto;
-  }
-  
+  transform: translateY(-5px);
 }
 
 @media (max-width: 992px) {
-  .servicios {
-    height: auto;
-  }
-
   .cuadricula {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-  gap: 5px;
-  } 
-}
-
-@media (max-width: 768px) {
-  .servicios {
-    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
   }
-  .cuadricula {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-  gap: 5px;
-  } 
 }
 
 @media (max-width: 576px) {
-  .servicios {
-    height: 50%;
-    width: 100%;
-    margin: 0 auto;
-  }
   .cuadricula {
-    display: grid;
-    margin: 0 auto;
-    padding: 1em;
-    grid-template-columns: 1fr  ;
-    grid-template-rows: 1fr  ;
-  gap: 1em;
+    grid-template-columns: 1fr;
+  }
+
+  .icon-box {
+    padding: 15px;
   }
 
   .icon-box h3 {
-    margin: 0 ;
-    font-size: 1.4em;
-    padding: 0.5em;
-    text-align: center;
-align-items: center;
-  }
-  .icon-box p {
-    padding: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
+  .icon-box p {
+    font-size: 0.9em;
+  }
 }
 
- 
+
+.box1 {
+  background-color:var(--color-azul) ;
+  
+  }
+  .box2 {
+    background-color: var(--color-mostaza);  
+  }
+  .box3 {
+    background-color: var(--color-naranja); 
+  }
+  .box4 {
+    background-color:var(--color-terciario) ; 
+  }
+  .box5 {
+    background-color: var(--color-fondo);  
+  }
+  .box6 {
+    background-color:var(--color-azul) ;  
+  }
+
+
 /* Contacto  */
 
  .formulario {
@@ -869,89 +824,50 @@ form .button-area{
 /* info de atención  */
 .informacion {
   display: flex;
- margin-top: 2%  ;
- margin-bottom: 2% ;
- margin-left: 5%  ;
- padding: 3%;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 90%;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.informacion .certificado, .informacion .barra, .informacion .analisis, .informacion .grupo, .informacion .maleta {
-  text-align: center;
-  width: 18%;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.informacion .certificado:hover, .informacion .barra:hover, .informacion .analisis:hover, .informacion .grupo:hover, .informacion .maleta:hover {
-  background-color: #e0e0e0;
+.informacion > div {
+  flex: 1 1 300px;
+  max-width: 260px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .informacion span {
-  font-size: 40px;
-  color: var(--color-mostaza); /* Color azul para los iconos */
-  margin-bottom: 10px;
-  display: block;
+  font-size: 2em;
+  color: var(--color-secundario);
 }
 
 .informacion h1 {
-  text-transform:uppercase;
-  color: var(--color-mostaza);
-  font-size: 1.2em;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin: 10px 0;
 }
 
 .informacion p {
-  color: var(--color-texto);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 1em;
+  color: #333;
 }
 
-/* Media queries */
-
-/* Para pantallas de tabletas y dispositivos más pequeños */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .informacion {
     flex-direction: column;
     align-items: center;
   }
 
-  .informacion .certificado, .informacion .barra, .informacion .analisis, .informacion .grupo, .informacion .maleta {
-    width: 80%;
+  .informacion > div {
+    max-width: 100%;
     margin-bottom: 20px;
   }
 }
 
-/* Para pantallas de teléfonos móviles */
-@media (max-width: 480px) {
-  .informacion {
-    padding: 5%;
-  }
 
-  .informacion .certificado, .informacion .barra, .informacion .analisis, .informacion .grupo, .informacion .maleta {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .informacion span {
-    font-size: 30px;
-  }
-
-  .informacion h1 {
-    font-size: 16px;
-  }
-
-  .informacion p {
-    font-size: 14px;
-  }
-}
 /* conocenos  */
 .seccion {
   height: 100vh;
